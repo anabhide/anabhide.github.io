@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anant Bhide</title>
+    <style>
+        :root {
+            --text-color: #2d3748;
+            --heading-color: #1a202c;
+            --link-color: #3182ce;
+            --link-hover: #2b6cb0;
+            --bg-color: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 50px;
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        .name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            margin: 0 0 15px 0;
+        }
+
+        .links-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .links-list li {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .links-list a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .links-list a:hover {
+            text-decoration: underline;
+            color: var(--link-hover);
+        }
+
+        /* Main Content Styling */
+        .main-content h2 {
+            font-size: 1.5rem;
+            color: var(--heading-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        .main-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .bio-text {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .pub-list {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .pub-item {
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: var(--heading-color);
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: #4a5568;
+        }
+
+        .pub-links {
+            font-size: 0.9rem;
+            margin-top: 4px;
+        }
+
+        .pub-links a {
+            color: var(--link-color);
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        /* Responsive Layout for Mobile */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 20px;
+            }
+            .sidebar {
+                text-align: center;
+            }
+            .links-list {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Left Column: Image & Contact Info -->
+        <div class="sidebar">
+            <!-- Ensure your image is uploaded to GitHub as profile.jpg -->
+            <img src="profile.jpg" alt="Anant Bhide" class="profile-img">
+            <h1 class="name">Anant Bhide</h1>
+            
+            <ul class="links-list">
+                <li>📧 <a href="mailto:abhide@umass.edu">abhide@umass.edu</a></li>
+                <!-- Replace with your actual URLs below -->
+                <li>💻 <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">GitHub</a></li>
+                <li>👔 <a href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Column: Biography & Publications -->
+        <div class="main-content">
+            
+            <h2>About Me</h2>
+            <p class="bio-text">
+                I am an M.S. student in Computer Science at the University of Massachusetts Amherst, advised by Prof. Peter J. Haas and Prof. David Jensen. My research lies at the intersection of machine learning, causal inference, and simulation modeling. I am interested in using causal models to represent complex simulation systems and support causal reasoning and decision-making in settings where simulation is expensive.
+            </p>
+            <p class="bio-text">
+                I am also interested in probabilistic machine learning, particularly flow-based and diffusion-based generative models. Previously, I completed my bachelor’s degree at the University of Alberta, where I was a TA for CMPUT 304 and CMPUT 340 and worked as a Research Assistant in the RLAI lab under Prof. Rupam Mahmood. I have also interned at Synopsys Inc. as a Software Engineering Intern.
+            </p>
+            <p class="bio-text">
+                I am always happy to discuss research and possible collaborations. Feel free to reach me at <a href="mailto:abhide@umass.edu">abhide@umass.edu</a>.
+            </p>
+
+            <h2>Publications & Preprints</h2>
+            <ul class="pub-list">
+                
+                <li class="pub-item">
+                    <span class="pub-title">Extending Causal Metamodeling to a non-Markovian Queue</span><br>
+                    Pracheta Amarnath, <strong>Anant Bhide</strong>, David Jensen, Peter Hass [Co-authors]<br>
+                    <span class="pub-venue">Winter Simulation Conference (WSC), 2026</span>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2606.00795" target="_blank">[arXiv]</a>
+                    </div>
+                </li>
+
+                <li class="pub-item">
+                    <span class="pub-title">Stacking-Based Weighting for Large Language Bayes in M-Open Settings</span><br>
+                    <strong>Anant Bhide</strong>, Akarsh Gupta, Edmond Cunningham, Justin Domke<br>
+                    <span class="pub-venue">Epistemic Intelligence in Machine Learning (EIML) Workshop at ICML, 2026</span> <span style="color: #718096; font-size: 0.9rem;">(To appear)</span>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+</html>
